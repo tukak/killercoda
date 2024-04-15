@@ -16,7 +16,7 @@
       "text": "finish.md"
     },
     "assets": {
-      "kubernetes": [{"file": "deployment.yaml", "target": "~/", "chmod": "+w"}]
+      "host01": [{"file": "deployment.yaml", "target": "~/", "chmod": "+w"}]
     }
   },
   "backend": {
