@@ -1,4 +1,3 @@
-
 <br>
 
-### Let's learn some Kubernetes
+### Hi and welcome to the Deployment troubleshooting scenario!
