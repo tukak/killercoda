@@ -10,6 +10,10 @@
         "title": "Troubleshoot a deployment",
         "text": "step1/text.md",
         "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Improve a deployment",
+        "text": "step2/text.md"
       }
     ],
     "finish": {

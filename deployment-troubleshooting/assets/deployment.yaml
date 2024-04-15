@@ -1,1 +1,40 @@
-test
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+          env:
+            - name: ACCESS_KEY
+              value: "dGhpc3Nob3VsZGJlc2VjcmV0Cg=="
+          resources:
+            requests:
+              cpu: 2000
+              memory: 2Gi
+            limits:
+              cpu: 2000m
+          livenessProbe:
+            httpGet:
+              path: /
+              port: web
+            initialDelaySeconds: 3
+            periodSeconds: 3
+          readinessProbe:
+            httpGet:
+              path: /
+              port: web
+            initialDelaySeconds: 3
+            periodSeconds: 3
