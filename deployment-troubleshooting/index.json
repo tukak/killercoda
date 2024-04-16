@@ -14,13 +14,21 @@
       {
         "title": "Improve a deployment",
         "text": "step2/text.md"
+      },
+      {
+        "title": "Improve a deployment",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
       }
     ],
     "finish": {
       "text": "finish.md"
     },
     "assets": {
-      "host01": [{"file": "deployment.yaml", "target": "~/", "chmod": "+w"}]
+      "host01": [
+        {"file": "deployment.yaml", "target": "~/", "chmod": "+w"},
+        {"file": "service.yaml", "target": "~/", "chmod": "+w"}
+      ]
     }
   },
   "backend": {
