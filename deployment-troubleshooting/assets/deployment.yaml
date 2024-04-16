@@ -26,6 +26,8 @@ spec:
               memory: 2Gi
             limits:
               cpu: 2000m
+          securityContext:
+            privileged: true
           livenessProbe:
             httpGet:
               path: /
